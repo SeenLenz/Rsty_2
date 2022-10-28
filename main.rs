@@ -35,6 +35,16 @@ where
         sample_clock = (sample_clock + 1.0) % sample_rate;
         (sample_clock * 440.0 * 2.0 * std::f32::consts::PI / sample_rate).sin()
     };
+    
+    // let mut x = 0 f32;
+    // let mut sample_clock = 0f32;
+    // let mut next_value = move || {
+    // sample_clock = sample_clock + 1.0;
+    //    ((chanels.1 + chanels.2) * .5) * 
+    //    (((std::f32::consts::PI * (x - sample_clock * sample_rate)) / sample_rate).sin() / ((std::f32::consts::PI * (x - sample_clock * sample_rate)) / sample_rate ))
+    // };
+    
+    added whitakkker shannon formula
 
     let err_fn = |err| eprintln!("an error occurred on stream: {}", err);
 
